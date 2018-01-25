@@ -37,7 +37,7 @@ p_102_20180123_0004A30B001B5D4B_PH_p_102_00_sequencing_run_180123_Minden9693_run
 
 ### Output 
 
-The script will produce plots for the following and save as png files in a directory with `--output_prefix` name:
+The script will produce plots for the following and save as png files in a directory with `--output` name:
 1. Total yield as a function of sequencing time
 2. Maximum read length as a function of cumulative sequencing time
 3. Average read length as a function of cumulative sequencing time
