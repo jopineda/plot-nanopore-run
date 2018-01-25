@@ -26,7 +26,7 @@ def main():
     # --------------------------------------------------------
     # PART 0: Parse the input
     # --------------------------------------------------------
-    parser = argparse.ArgumentParser(prog='preqc-lr',description='Calculate nanopore run report')
+    parser = argparse.ArgumentParser(prog='plot_nanopore_run',description='Calculate nanopore run report')
     parser.add_argument('-s', '--summary', action="store", required=True, dest="seq_summaries", nargs='+', 
                         help="sequencing summary tab-separated file(s)") 
     parser.add_argument('-o', '--output', action="store", required=False, dest="output_prefix", 
