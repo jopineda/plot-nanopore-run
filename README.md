@@ -44,4 +44,4 @@ The script will produce plots for the following and save as png files in a direc
 4. Maximum read length per hour
 5. Average read length per hour
 
-It will also produce a PDf with all these plots.
+It will also produce a PDF with all these plots.
