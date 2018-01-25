@@ -1,6 +1,11 @@
 # plot-nanopore-run
 Generates plots reporting on nanopore runs
 
+## Requirements
+
+1. Python 2.7
+2. matplotlib 2.0.0 + dependencies
+
 ## General usage
 
 ```
@@ -9,7 +14,7 @@ usage: plot_nanopore_run.py [-h] -s/--summary SEQ_SUMMARIES [SEQ_SUMMARIES ...] 
 
 Calculate nanopore run report
 
-optional arguments:
+arguments:
   -h, --help            show this help message and exit
   -s SEQ_SUMMARIES [SEQ_SUMMARIES ...], --summary SEQ_SUMMARIES [SEQ_SUMMARIES ...]
                         sequencing summary tab-separated file(s)
