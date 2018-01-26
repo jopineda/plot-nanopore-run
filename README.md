@@ -8,7 +8,7 @@ Generates plots reporting on nanopore runs
 
 ## Installation
 
-```
+```bash
 git clone https://github.com/jopineda/plot-nanopore-run.git
 virtualenv plot-nanopore-run-venv
 # check setuptools installed
