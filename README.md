@@ -6,6 +6,17 @@ Generates plots reporting on nanopore runs
 1. Python 2.7
 2. matplotlib 2.0.0 + dependencies
 
+## Installation
+
+```
+git clone https://github.com/jopineda/plot-nanopore-run.git
+virtualenv plot-nanopore-run-venv
+# check setuptools installed
+pip list
+# set up matplotlib
+python setup.py install
+```
+
 ## General usage
 
 ```
@@ -31,8 +42,8 @@ Example sequence summary file:
 
 ```
 filename    read_id    run_id    channel    start_time    duration    num_events    passes_filtering    template_start    num_events_template    template_duration    num_called_template    sequence_length_template    mean_qscore_template    strand_score_template    calibration_strand_genome_template    calibration_strand_identity_template    calibration_strand_accuracy_template    aligned_speed_bps_template
-p_102_20180123_0004A30B001B5D4B_PH_p_102_00_sequencing_run_180123_Minden9693_run3_21050_read_10208_ch_1531_strand.fast5    075fb561-9f3c-4248-8382-1d79df8977ba    75052db6272cde941f37a391e84c912fd8f459c9    1531    6548.61575    1.11875    895    False    0.0    895    1.11875    895    443    5.091    -0.0013    filtered_out    -1.0    -1.0    0.0
-p_102_20180123_0004A30B001B5D4B_PH_p_102_00_sequencing_run_180123_Minden9693_run3_21050_read_10194_ch_1531_strand.fast5    12e7dd12-ab0b-4bab-abab-e03c595b96da    75052db6272cde941f37a391e84c912fd8f459c9    1531    6545.75575    1.14    912    False    0.0    912    1.14    912    511    4.7    -0.0012    filtered_out    -1.0    -1.0    0.0
+read_1_ch_1531_strand.fast5   read_id_1    run_id_1    1531    6548.61575    1.11875    895    False    0.0    895    1.11875    895    443    5.091    -0.0013    filtered_out    -1.0    -1.0    0.0
+read_2_ch1223_strand.fast5    read_id_2    run_id_1    1531    6545.75575    1.14    912    False    0.0    912    1.14    912    511    4.7    -0.0012    filtered_out    -1.0    -1.0    0.0
 ```
 
 ### Output 
