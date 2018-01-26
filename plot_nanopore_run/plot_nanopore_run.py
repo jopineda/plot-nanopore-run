@@ -33,6 +33,8 @@ def main():
                         help="prefix of output directory")
     parser.add_argument('-r', '--run_id', action="store", required=True, dest="run_id", 
                         help="run id will be displayed as part of titles of plots. NOTE: wrap in quotes if spaces included.")
+    parser.add_argument('--yield_units', action="store", required=False, choices=['bp', 'Mbp', 'Gbp' ], dest="yield_units", default="Gbp",
+                        help="units for the y-axis of the Total yield plot. {bp, Mbp, Gbp}")
     args = parser.parse_args()
     
     # --------------------------------------------------------
@@ -79,6 +81,17 @@ def main():
     # PART 2: Collect data for each plot now 
     # --------------------------------------------------------
     # calculate mean read length per time, max read length per time, and total number of bases per time
+    # how do we want to save yield_data y-values?
+    if args.yield_units == "bp":
+        yu = 1
+        yul = "bases"     # yul will be used as label for plotting
+    elif args.yield_units == "Mbp":
+        yu = 1000000
+        yul = "megabases"
+    else: 
+        yu = 1000000000
+        yul = "gigabases"
+
     yield_data = list()
     avg_len_data = list()
     max_len_data = list()
@@ -112,9 +125,7 @@ def main():
                 max_len_per_hr = mx
             tot_bases_per_hr += s
             tot_reads_per_hr += l
-        print i 
         if plot_per_hr and (round(i,2)).is_integer():    # we've reached another full hour
-            print "Another hour"
             avg_len_per_hr = float(tot_bases_per_hr)/tot_reads_per_hr
             avg_len_per_hr_data.append((i, avg_len_per_hr))
             avg_len_per_hr = 0            # reset!
@@ -124,7 +135,7 @@ def main():
             max_len_per_hr = 0
        
         # record for each 0.01 hour
-        tb = round(float(tot_bases)/1000000000, 2)  # convert yield data to GB
+        tb = round(float(tot_bases)/yu, 2)  # convert yield data to either bps, Mbps, or Gbps
         yield_data.append((i, tb))
         avg_len_data.append((i, avg_len))
         max_len_data.append((i, max_len))
@@ -163,7 +174,7 @@ def main():
         plt.plot(x0, y0, '#FC614C')
         plt.title('Total yield: ' + args.run_id)
         plt.xlabel('Sequencing time (hours)')
-        plt.ylabel('Yield (gigabases)')
+        plt.ylabel('Yield (' + yul + ')')
         plt.xlim(min_time, max_time)
         plt.ylim(min(y0), max(y0) + 5)
         plt.grid(True, linestyle='-', linewidth=0.3)
@@ -228,7 +239,7 @@ def main():
             plt.grid(True, linestyle='-', linewidth=0.3)
             plt.xlim(min(x4), max(x4))
             pdf.savefig()
-            plt.savefig('avg_read_length_per_hour.png', dpi=700)
+            plt.savefig(directory + '/avg_read_length_per_hour.png', dpi=700)
             plt.close()
 
 if __name__ == "__main__":
