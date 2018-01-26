@@ -11,8 +11,6 @@ setup(name='plot_nanopore_run',
       packages=['plot_nanopore_run'],
       setup_requires=['numpy'],
       install_requires=[
-            'gevent',
-            'greenlet',
             'matplotlib==2.0.0'
       ],
       zip_safe=False)
