@@ -65,11 +65,11 @@ python plot_nanopore_run.py -s [/path/to/sequencing_summary_batch0.txt] [/path/t
 
 ### Example output
 
-![Total yield](example_plots/mion_run/total_yield.png =700x)
+![Total yield](example_plots/mion_run/total_yield.png) <!-- .element height="50%" width="50%" -->
 
-![Max read length](example_plots/mion_run/max_read_length.png)
+![Max read length](example_plots/mion_run/max_read_length.png)  <!-- .element height="50%" width="50%" -->
 
-![Avg read length](example_plots/mion_run/avg_read_length.png)
+![Avg read length](example_plots/mion_run/avg_read_length.png)  <!-- .element height="50%" width="50%" -->
 
 ![Max read length per hour](example_plots/mion_run/max_read_length_per_hour.png)
 
