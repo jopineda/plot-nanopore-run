@@ -42,8 +42,8 @@ Example sequence summary file:
 
 ```
 filename                        read_id    run_id      channel start_time    duration    num_events    passes_filtering    template_start    num_events_template    template_duration    num_called_template    sequence_length_template    mean_qscore_template    strand_score_template    calibration_strand_genome_template    calibration_strand_identity_template    calibration_strand_accuracy_template    aligned_speed_bps_template
-read_1_ch_1531_strand.fast5     read_id_1  run_id_1    1531    6548.61575    1.11875    895            False             0.0        895    1.11875    895    443    5.091    -0.0013    filtered_out    -1.0    -1.0    0.0
-read_2_ch1223_strand.fast5      read_id_2  run_id_1    1531    6545.75575    1.14       912            False             0.0        912    1.14       912    511    4.7      -0.0012    filtered_out    -1.0    -1.0    0.0
+read_1_ch_1531_strand.fast5     read_id_1  run_id_1    1531    6548.61575    1.11875     895            False              0.0               895                    1.11875              895                    443                         5.091                   -0.0013                  filtered_out                          -1.0                                    -1.0                                    0.0
+read_2_ch1223_strand.fast5      read_id_2  run_id_1    1531    6545.75575    1.14        912            False              0.0               912                    1.14                 912                    511                         4.7                     -0.0012                  filtered_out                          -1.0                                    -1.0                                    0.0
 ```
 
 ### Output 
