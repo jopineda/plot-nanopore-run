@@ -30,7 +30,7 @@ arguments:
   -s SEQ_SUMMARIES [SEQ_SUMMARIES ...], --summary SEQ_SUMMARIES [SEQ_SUMMARIES ...]
                         sequencing summary tab-separated file(s)
   -o OUTPUT_PREFIX, --output OUTPUT_PREFIX
-                        prefix of output directory
+                        prefix of output directory (Default: ./nanopore_run_report)
   -r RUN_ID, --run_id RUN_ID
                         run id will be displayed as part of titles of plots.
                         NOTE: wrap in quotes if spaces included.
@@ -56,3 +56,21 @@ The script will produce plots for the following and save as png files in a direc
 5. Average read length per hour
 
 It will also produce a PDF with all these plots.
+
+## Example usage
+
+```
+python plot_nanopore_run.py -s [/path/to/sequencing_summary_batch0.txt] [/path/to/sequencing_summary_batch1.txt] -r "MinION run 2018-01-22" -o mion_run
+```
+
+### Example output
+
+![Total yield](example_plots/mion_run/total_yield.png)
+
+![Max read length](example_plots/mion_run/max_read_length.png)
+
+![Avg read length](example_plots/mion_run/avg_read_length.png)
+
+![Max read length per hour](example_plots/mion_run/max_read_length_per_hour.png)
+
+![Avg read length per hour](example_plots/mion_run/avg_read_length_per_hour.png)
