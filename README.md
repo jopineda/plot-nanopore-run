@@ -66,11 +66,8 @@ python plot_nanopore_run.py -s [/path/to/sequencing_summary_batch0.txt] [/path/t
 ### Example output
 
 <p align="center"><img src="example_plots/mion_run/total_yield.png" alt="total yield" width="70%"></p>
-
-![Max read length](example_plots/mion_run/max_read_length.png)  <!-- .element height="50%" width="50%" -->
-
-![Avg read length](example_plots/mion_run/avg_read_length.png)  <!-- .element height="50%" width="50%" -->
-
-![Max read length per hour](example_plots/mion_run/max_read_length_per_hour.png)
-
-![Avg read length per hour](example_plots/mion_run/avg_read_length_per_hour.png)
+<p align="center"><img src="example_plots/mion_run/max_read_length.png" alt="max read length" width="70%"></p>
+<p align="center"><img src="example_plots/mion_run/avg_read_length.png" alt="avg read length" width="70%">
+<p align="center"><img src="example_plots/mion_run/max_read_length_per_hour.png" alt="max read length per hour" width="70%">
+<p align="center"><img src="example_plots/mion_run/avg_read_length_per_hour.png" alt="avg read length per
+hour" width="70%">
