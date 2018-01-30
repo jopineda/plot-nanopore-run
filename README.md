@@ -65,7 +65,7 @@ python plot_nanopore_run.py -s [/path/to/sequencing_summary_batch0.txt] [/path/t
 
 ### Example output
 
-![Total yield](example_plots/mion_run/total_yield.png) <!-- .element height="50%" width="50%" -->
+<p align="center"><img src="example_plots/mion_run/total_yield.png" alt="total yield" width="70%"></p>
 
 ![Max read length](example_plots/mion_run/max_read_length.png)  <!-- .element height="50%" width="50%" -->
 
