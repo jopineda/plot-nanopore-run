@@ -37,8 +37,9 @@ def main():
                         help="units for the y-axis of the Total yield plot. {bp, Mbp, Gbp}")
     args = parser.parse_args()
 
+    # Check input integrity
     assert (len(args.seq_summaries) == len(args.run_id)), "Each set of sequence summaries will need an associated run id"
-
+    assert (len(args.run_id) < 7), "Plotting script can handle up to 6 different runs"
 
     # --------------------------------------------------------
     # PART 1: Parse each sequence summary file and check
@@ -55,6 +56,9 @@ def main():
         min_time = 100000000
         run = dict()              # key = time, value = list of read lengths from reads created at this time point
         for ss in set:
+            if not os.path.exists(ss):
+                print "ERROR: sequence summary file (" + ss + ") does not exist."
+                sys.exit(1)
             with open(ss) as infile:
                 next(infile)
                 for line in infile:
