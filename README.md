@@ -45,6 +45,8 @@ optional arguments:
 
 ### Input
 
+Sequencing summmary files were generated using the albacore basecaller. This plotting script takes as input one or more of these text files that come from the same run thus the `run_id` column should be the same for all of these files.
+  
 Example sequence summary file:
 
 ```
@@ -68,15 +70,15 @@ It will also produce a PDF with all these plots.
 
 For single-run plots:
 ```
-python plot_nanopore_run.py -s [/path/to/sequencing_summary_batch0.txt] [/path/to/sequencing_summary_batch1.txt] -r "MinION run 2018-01-22" -o mion_run
+python plot_nanopore_run.py -s /path/to/batch0/sequencing_summary.txt /path/to/batch1/sequencing_summary.txt -r "MinION run 2018-01-22" -o mion_run
 ```
 
 For multi-run plots:
 ```
 python plot_nanopore_run.py \
-    -s [/path/to/MINIONRUN/sequencing_summary_batch0.txt] [/path/to/MINIONRUN/sequencing_summary_batch1.txt] \
+    -s /path/to/MINIONRUN/batch0/sequencing_summary.txt /path/to/MINIONRUN/batch1/sequencing_summary.txt \
     -r "MinION run 2018-01-22" \
-    -s [/path/to/PROMETHIONRUN/sequencing_summary_batch0.txt] \
+    -s /path/to/PROMETHIONRUN/sequencing_summary.txt \
     -r "PromethION run 2018-02-01" \
     -o nanopore_multi_run
 ```
